@@ -1,0 +1,22 @@
+{
+  "name": "krzy.io",
+  "version": "1.0.0",
+  "description": "cf",
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:wranger": "wrangler pages dev dist --live-reload",
+    "dev:esbuild": "esbuild --bundle src/server.js --fromat-esm --watch outfile=dist/_worker.js",
+    "buid": "esbuild --bundle src/server.js --format=esm --outfile=dist/_worker.js",
+    "deploy": "wrangler pages publish dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ardeshir/krzy.io"
+  },
+  "keywords": [
+    "krzy"
+  ],
+  "author": "the fool",
+  "license": "ISC"
+}
